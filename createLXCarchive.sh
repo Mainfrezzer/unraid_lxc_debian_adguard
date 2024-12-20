@@ -10,7 +10,7 @@ LXC_PATH=$(cat /boot/config/plugins/lxc/lxc.conf | grep "lxc.lxcpath" | cut -d '
 LXC_PACKAGE_NAME=adguard
 LXC_PACKAGE_DIR=${LXC_PATH}/cache/build_cache
 LXC_DISTRIBUTION=debian
-LXC_RELEASE=bookworm
+LXC_RELEASE=trixie
 LXC_ARCH=amd64
 LXC_BUILD_ROOT=$(cd "$(dirname "$0")" && pwd)
 
