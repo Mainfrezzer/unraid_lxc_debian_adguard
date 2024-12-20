@@ -48,16 +48,16 @@ lxc-start -n ${LXC_CONT_NAME}
 echo "Waiting 10 seconds for temporary container to become online"
 sleep 10
 
-# create /tmp directory in container if it not exists and copy build scripts
+# create /home directory in container if it not exists and copy build scripts
 echo "Copying build directory to container"
-cp -R ${LXC_BUILD_ROOT}/build ${LXC_PATH}/${LXC_CONT_NAME}/rootfs/tmp/build
+cp -R ${LXC_BUILD_ROOT}/build ${LXC_PATH}/${LXC_CONT_NAME}/rootfs/home/build
 
 # loop through build scripts
 echo "Executing build scripts in container"
 IFS=$'\n'
 for script in ${LXC_BUILD_FILES}; do
   echo "Executing build script $script in container"
-  lxc-attach -n ${LXC_CONT_NAME} -- bash -c "chmod +x /tmp/build/$script && /tmp/build/$script 2>&1 | tee /tmp/${script%.*}.log"
+  lxc-attach -n ${LXC_CONT_NAME} -- bash -c "chmod +x /home/build/$script && /home/build/$script 2>&1 | tee /home/${script%.*}.log"
 done
 
 # stop LXC container
@@ -67,7 +67,7 @@ lxc-stop -n ${LXC_CONT_NAME} -t 15 2>/dev/null
 # copy over build log files
 echo "Copying over build logs from container"
 for script in ${LXC_BUILD_FILES}; do
-  cp ${LXC_PATH}/${LXC_CONT_NAME}/rootfs/tmp/${script%.*}.log ${LXC_PACKAGE_DIR}/${LXC_PACKAGE_NAME}_${script%.*}.log
+  cp ${LXC_PATH}/${LXC_CONT_NAME}/rootfs/home/${script%.*}.log ${LXC_PACKAGE_DIR}/${LXC_PACKAGE_NAME}_${script%.*}.log
 done
 
 # navigate to LXC container path, remove .bash_histroy, remove parts from
@@ -76,7 +76,7 @@ done
 echo "Performing final cleanup from container"
 cd ${LXC_PATH}/${LXC_CONT_NAME}
 find . -name ".bash_history" -exec rm {} \;
-rm -rf ${LXC_PATH}/${LXC_CONT_NAME}/rootfs/tmp/*
+rm -rf ${LXC_PATH}/${LXC_CONT_NAME}/rootfs/home/*
 sed -i '/# Container specific configuration/,$d' config
 
 # combine and copy build log to package directory
