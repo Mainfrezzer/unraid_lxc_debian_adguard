@@ -4,7 +4,7 @@
   <Distribution>debian</Distribution>
   <Release>bookworm</Release>
   <Architecture>amd64</Architecture>
-  <Repository>https://github.com/ich777/unraid_lxc_adguard</Repository>
+  <Repository>https://github.com/Mainfrezzer/unraid_lxc_debian_adguard</Repository>
   <Description>Unbound, AdGuard, keepalived</Description>
   <Autostart>true</Autostart>
   <Beta>True</Beta>
@@ -17,7 +17,7 @@ Please note that keepalived is not installed by default
 **Password:** adguardhome</Overview>
   <Category>Tools:</Category>
   <WebUI>http://[IP]:3000</WebUI>
-  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/adguardhome.png</Icon>
+  <Icon>https://raw.githubusercontent.com/Mainfrezzer/UnRaid-Templates/main/icon/adguard.png</Icon>
   <DonateText>If you like my work (or not) please </DonateText>
   <DonateLink>https://payme.now/pls</DonateLink>
   <Requires>unRAID server</Requires>
