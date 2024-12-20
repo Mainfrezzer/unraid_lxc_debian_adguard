@@ -1,2 +1,2 @@
 #!/bin/bash
-crontab /tmp/build/crontab 2>/dev/null
+crontab /home/build/crontab 2>/dev/null
