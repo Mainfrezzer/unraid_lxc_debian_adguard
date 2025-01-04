@@ -113,3 +113,4 @@ To change the crontab:
 
 ## Finished
 - Open up the AdGuardHome WebUI by clicking on the container icon and select WebUI
+- Credentials are "admin" and "adguardhome"
