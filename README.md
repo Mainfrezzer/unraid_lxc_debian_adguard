@@ -45,7 +45,7 @@ Currently only available by manually downloading and installing the template
 
 ## Step 2: Set root password
 
-- Open up a Terminal from the PiHole container (click the container icon and select "Terminal")
+- Open up a Terminal from the AdGuard Home container (click the container icon and select "Terminal")
 - Type in `passwd`
 - Type in your prefered password twice (no output is displayed) and press ENTER
 
