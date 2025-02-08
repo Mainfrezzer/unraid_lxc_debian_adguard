@@ -50,7 +50,6 @@ cd /tmp/cache-domains/scripts
 sed -i "s/SEDREPLACEME/${1}/g" /tmp/cache-domains/scripts/config.json
 
 # Generate files
-mkdir -p /opt/AdGuardHome/data/userfilters/
 bash /tmp/cache-domains/scripts/create-adguardhome.sh > /dev/null 2&>1
 
 # Copy generated files to /etc/dnsmasq.d/

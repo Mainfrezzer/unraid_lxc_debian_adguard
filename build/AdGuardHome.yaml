@@ -100,6 +100,10 @@ filters:
     url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_2.txt
     name: AdAway Default Blocklist
     id: 2
+  - enabled: false
+    url: /opt/AdGuardHome/data/userfilters/lancache.conf
+    name: LANCache
+    id: 3
 whitelist_filters: []
 user_rules: []
 dhcp:

@@ -10,3 +10,4 @@ cp /home/build/update-roothints.sh /root/update-roothints.sh
 cp /home/build/AdGuardHome.yaml /opt/AdGuardHome/AdGuardHome.yaml
 cp /home/build/update-lancache.sh /root/update-lancache.sh
 cp /home/build/update-lancachedomains.sh /root/update-lancachedomains.sh
+mkdir -p /opt/AdGuardHome/data/userfilters/

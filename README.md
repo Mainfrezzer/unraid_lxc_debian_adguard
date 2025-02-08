@@ -130,9 +130,11 @@ After mounting the path from the Host you can run this script. On the first run 
 
 If you need other values then please edit the file `/root/update-lancache.sh` and audjust the values to your preferences (please note if you exceed the disk size for the value from CACHE_SIZE the container will not start and will be stuck in a restart loop)
 
-Please also run `/root/update-lancachedomains.sh YOURIP` once to generate the AdGuardHome filterlist which you need to add under "Filters" with the Adguard Web UI with `/opt/AdGuardHome/data/userfilters/lancache.conf` as location. (please replace `YOURIP` with the IP from your AdGuardHome or keepalived IP address <- this applies also to the crontab if you enable that schedule).
+Please also run `/root/update-lancachedomains.sh YOURIP` once to generate the AdGuardHome filterlist. (please replace `YOURIP` with the IP from your AdGuardHome or keepalived IP address <- this applies also to the crontab if you enable that schedule).
 
-Also, by default, it will include all services in the `/opt/AdGuardHome/data/userfilters/lancache.conf` file. Edit that one manually to only enable the services you want to use for your lancache.
+To enable the LANCache, head into the AdGuardHome webinterface -> Filters -> DNS blocklists and enable the LANCache 
+
+By default, it will include all services in the `/opt/AdGuardHome/data/userfilters/lancache.conf` file. Edit that one manually to only enable the services you want to use for your lancache.
 
 To enable frequent updates from lancache remove the `#` from the last line in the crontab, see [(optional) Confiure cron](#optional-step-5-configure-cron) for more information.
 
