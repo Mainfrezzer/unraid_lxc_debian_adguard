@@ -2,10 +2,10 @@
 <LXC version="0.1">
   <Name>AdGuard</Name>
   <Distribution>debian</Distribution>
-  <Release>trixie</Release>
+  <Release>bookworm</Release>
   <Architecture>amd64</Architecture>
   <Repository>https://github.com/Mainfrezzer/unraid_lxc_debian_adguard</Repository>
-  <Description>Unbound, AdGuard, keepalived</Description>
+  <Description>Unbound, AdGuard, keepalived, Lancache</Description>
   <Autostart>true</Autostart>
   <Beta>True</Beta>
   <Support>https://support.me.pls</Support>
