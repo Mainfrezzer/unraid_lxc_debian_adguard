@@ -11,6 +11,7 @@
 - Unbound
 - keepalived
 - Cron
+- LANCache
 - AdGuard Home
 
 (please note that IPv6 is disabled by default)
