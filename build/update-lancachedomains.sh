@@ -14,8 +14,8 @@ fi
 
 # Show help for quiet usage
 if [ "$2" != "-q" ]; then
-  echo "This process will start generating all necessary dnsmasq files for LANCache so that"
-  echo "it properly interacts with PiHole and redirects all requests to your LANCache"
+  echo "This process will start generating the necessary AdGuardHome file for LANCache so that"
+  echo "it properly interacts with AdGuardHome and redirects all requests to your LANCache"
   echo "IP address: ${1}"
   echo
   echo "ATTENTION: The container will restart after the process is finished!"
