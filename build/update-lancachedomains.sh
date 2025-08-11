@@ -46,6 +46,9 @@ echo '{
 # Change directory
 cd /tmp/cache-domains/scripts
 
+# Fix that disaster that was created
+sed -i 's/^\s*cachename\s*=\s*${cachenamedefault}\s*$/cachename="cachenamedefault"/' /tmp/cache-domains/scripts/create-adguardhome.sh
+
 # Inject IP address to config file
 sed -i "s/SEDREPLACEME/${1}/g" /tmp/cache-domains/scripts/config.json
 
